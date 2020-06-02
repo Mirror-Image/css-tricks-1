@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+body h1 {
+  margin-bottom: 4rem;
+  color: #fc3838;
+}
+
+.shadow {
+  position: relative;
+  width: 500px;
+  height: 350px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#262626));
+  background: -o-linear-gradient(#000, #262626);
+  background: linear-gradient(#000, #262626);
+}
+
+.shadow:before, .shadow:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background: -o-linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 200%;
+  z-index: -1;
+  -webkit-animation: animate 15s ease infinite;
+          animation: animate 15s ease infinite;
+}
+
+.shadow:after {
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
